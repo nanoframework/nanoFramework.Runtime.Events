@@ -9,7 +9,7 @@
 
 | Component | Build Status | NuGet Package |
 |:-|---|---|
-| Class Libraries | [![Build status](https://ci.appveyor.com/api/projects/status/terbqvfdlw8po3cm?svg=true)](https://ci.appveyor.com/project/nfbot/nf-class-libraries) | [![NuGet](https://img.shields.io/nuget/dt/nanoFramework.Runtime.Events.svg)]() |
+| Class Libraries | [![Build status](https://ci.appveyor.com/api/projects/status/oa7157hk8ahjgqfr?svg=true)](https://ci.appveyor.com/project/nfbot/lib-nanoframework-runtime-events) | [![NuGet](https://img.shields.io/nuget/dt/nanoFramework.Runtime.Events.svg)](https://www.nuget.org/packages/nanoFramework.Runtime.Events) |
 
 
 ## Feedback and documentation
