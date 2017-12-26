@@ -26,6 +26,6 @@ namespace nanoFramework.Runtime.Events
         /// <summary>
         /// Holds the event's time stamp.
         /// </summary>
-        public DateTime Time;
+        public System.DateTime Time;
     }
 }
