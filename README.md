@@ -4,12 +4,15 @@
 
 ### Welcome to the **nanoFramework** Runtime Events Class Library repository!
 
+[![NuGet](https://img.shields.io/nuget/dt/nanoFramework.Runtime.Events.svg)]() [![#yourfirstpr](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)](https://github.com/nanoframework/Home/blob/master/CONTRIBUTING.md)
+
 
 ## Build status
 
 | Component | Build Status | NuGet Package |
 |:-|---|---|
-| Class Libraries | [![Build status](https://ci.appveyor.com/api/projects/status/oa7157hk8ahjgqfr?svg=true)](https://ci.appveyor.com/project/nfbot/lib-nanoframework-runtime-events) | [![NuGet](https://img.shields.io/nuget/dt/nanoFramework.Runtime.Events.svg)](https://www.nuget.org/packages/nanoFramework.Runtime.Events) |
+| nanoFramework.Runtime.Events | [![Build status](https://ci.appveyor.com/api/projects/status/oa7157hk8ahjgqfr/branch/develop?svg=true)](https://ci.appveyor.com/project/nfbot/lib-nanoframework-runtime-events/branch/master) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.Runtime.Events.svg)](https://www.nuget.org/packages/nanoFramework.Runtime.Events/)  |
+| nanoFramework.Runtime.Events (preview) | [![Build status](https://ci.appveyor.com/api/projects/status/oa7157hk8ahjgqfr/branch/develop?svg=true)](https://ci.appveyor.com/project/nfbot/lib-nanoframework-runtime-events/branch/develop) | [![MyGet Pre Release](https://img.shields.io/myget/nanoframework-dev/vpre/nanoFramework.Runtime.Events.svg)](https://www.myget.org/feed/nanoframework-dev/package/nuget/nanoFramework.Runtime.Events) |
 
 
 ## Feedback and documentation
