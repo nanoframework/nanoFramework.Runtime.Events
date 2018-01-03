@@ -61,7 +61,7 @@ namespace nanoFramework.Runtime.Events
             }
         }
 
-        private void EventDispatchCallback(uint data1, uint data2, System.DateTime time)
+        private void EventDispatchCallback(uint data1, uint data2, DateTime time)
         {
             EventInfo eventInfo = null;
             BaseEvent ev = null;
@@ -178,7 +178,7 @@ namespace nanoFramework.Runtime.Events
             if (s_eventSink != null)
             {
                 uint d = (uint)(((uint)data1 << 16) | ((uint)category << 8) | subCategory);
-                System.DateTime time = System.DateTime.UtcNow;
+                DateTime time = DateTime.UtcNow;
                 s_eventSink.EventDispatchCallback(d, data2, time);
             }
         }
@@ -211,7 +211,7 @@ namespace nanoFramework.Runtime.Events
             }
         }
 
-        private static void GetEvent(uint data1, uint data2, System.DateTime time, ref EventInfo eventInfo, ref BaseEvent ev)
+        private static void GetEvent(uint data1, uint data2, DateTime time, ref EventInfo eventInfo, ref BaseEvent ev)
         {
             byte category = (byte)((data1 >> 8) & 0xFF);
 
