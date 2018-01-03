@@ -24,6 +24,6 @@ namespace nanoFramework.Runtime.Events
         /// <returns>The event that was processed, or null if the event can't be processed.</returns>
         /// <remarks>In the event that the processor cannot process an event, IEventProcessor should return null.
         /// In that case next processor will be given an opportunity.</remarks>
-        BaseEvent ProcessEvent(uint data1, uint data2, System.DateTime time);
+        BaseEvent ProcessEvent(uint data1, uint data2, DateTime time);
     }
 }

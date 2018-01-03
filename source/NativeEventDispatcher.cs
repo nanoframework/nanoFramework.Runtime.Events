@@ -15,7 +15,7 @@ namespace nanoFramework.Runtime.Events
     /// <param name="data1">First parameter (can be the port).</param>
     /// <param name="data2">First parameter (can be the port).</param>
     /// <param name="time">Time of the event.</param>
-    public delegate void NativeEventHandler(uint data1, uint data2, System.DateTime time);
+    public delegate void NativeEventHandler(uint data1, uint data2, DateTime time);
 
     /// <summary>
     /// Initializes a new instance of the <see cref="NativeEventDispatcher"/> class.
@@ -23,12 +23,12 @@ namespace nanoFramework.Runtime.Events
     public class NativeEventDispatcher : IDisposable
     {
         /// <summary>
-        /// The event handler for this <see cref="NativeEventDispatcher"/> object (a mulitcast combinable delegate).
+        /// The event handler for this <see cref="NativeEventDispatcher"/> object (a multicast combinable delegate).
         /// </summary>
         protected NativeEventHandler threadSpawn = null;
 
         /// <summary>
-        /// The event handler for this <see cref="NativeEventDispatcher"/> object (a mulitcast combinable delegate).
+        /// The event handler for this <see cref="NativeEventDispatcher"/> object (a multicast combinable delegate).
         /// </summary>
         protected NativeEventHandler callbacks = null;
 
@@ -170,7 +170,7 @@ namespace nanoFramework.Runtime.Events
             }
         }
 
-        private void MultiCastCase(uint port, uint state, System.DateTime time)
+        private void MultiCastCase(uint port, uint state, DateTime time)
         {
             callbacks?.Invoke(port, state, time);
         }
