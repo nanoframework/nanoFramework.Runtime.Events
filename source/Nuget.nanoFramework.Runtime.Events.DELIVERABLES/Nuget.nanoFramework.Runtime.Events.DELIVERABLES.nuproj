@@ -37,9 +37,6 @@
     <Dependency Include="nanoFramework.CoreLibrary">
       <Version>[1.0.0-preview043]</Version>
     </Dependency>
-    <Dependency Include="nanoFramework.System.DateTime">
-      <Version>[1.0.0-preview007]</Version>
-    </Dependency>    
   </ItemGroup>  
   <PropertyGroup Label="Globals">
     <ProjectGuid>E9FBDD2D-BFF9-41B7-BAE4-0CE37500DECF</ProjectGuid>
