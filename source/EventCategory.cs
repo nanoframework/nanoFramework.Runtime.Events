@@ -22,6 +22,10 @@ namespace nanoFramework.Runtime.Events
         /// <summary>
         /// Specifies a GPIO event.
         /// </summary>
-        Gpio = 20
+        Gpio = 20,
+        /// <summary>
+        /// Specifies a Network event.
+        /// </summary>
+        Network = 40
     }
 }
