@@ -24,6 +24,10 @@ namespace nanoFramework.Runtime.Events
         /// </summary>
         Gpio = 20,
         /// <summary>
+        /// Specifies a SerialDevice event.
+        /// </summary>
+        SerialDevice = 30,
+        /// <summary>
         /// Specifies a Network event.
         /// </summary>
         Network = 40
