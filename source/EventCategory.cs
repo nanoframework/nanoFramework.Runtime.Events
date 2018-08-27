@@ -30,6 +30,10 @@ namespace nanoFramework.Runtime.Events
         /// <summary>
         /// Specifies a Network event.
         /// </summary>
-        Network = 40
+        Network = 40,
+        /// <summary>
+        /// Specifies a WiFi event.
+        /// </summary>
+        WiFi = 50
     }
 }
