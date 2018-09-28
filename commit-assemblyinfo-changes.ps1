@@ -46,9 +46,9 @@ else
  
     # start PR
     $prRequestBody = "{ ""title"": ""$commitMessage"", ""body"": ""$commitMessage"", ""head"": ""$newBranch"", ""base"": ""develop"" }"
-    $githubApiEndpoint = "https://api.github.com/repos/$env:APPVEYOR_REPO_NAME/pulls"
+    $githubApiEndpoint = "https://api.github.com/repos/nanoframework/nf-interpreter/pulls"
     $webClient = New-Object System.Net.WebClient
-    $webClient.Headers.add('User-Agent', "User-Agent: Mozilla/4.0 (compatible; MSIE 7.0;)") 
+    $webClient.Headers.Add("User-Agent", "User-Agent: Mozilla/4.0 (compatible; MSIE 7.0;)") 
     $webClient.Headers.add('Authorization', "Basic $env:GitHubToken")
     $webClient.Headers.add('Content', "application/json")
     $webClient.UploadString($githubApiEndpoint, 'POST', $prRequestBody)
