@@ -5,12 +5,14 @@ if ($env:appveyor_pull_request_number)
 }
 else
 {
-    # updated assembly info files
+    # updated assembly info files   
     git add "source\Properties\AssemblyInfo.cs"
     git commit -m "Update assembly info file for v$env:GitVersion_NuGetVersionV2"
     # need to wrap the git command bellow so it doesn't throw an error because of redirecting the output to stderr
-    "$(git push origin)"
-
+    git push origin --porcelain -q > $null
+    
+    'Updated assembly info...' | Write-Host -ForegroundColor White -NoNewline
+    'OK' | Write-Host -ForegroundColor Green
 
     # clone nf-interpreter repo (only a shallow clone with last commit)
     git clone https://github.com/nanoframework/nf-interpreter -b develop --depth 1 -q
@@ -20,7 +22,7 @@ else
     $newBranch = "nfbot/$env:APPVEYOR_REPO_BRANCH/update-version/$env:GitVersion_NuGetVersionV2" 
     
     # create branch to perform updates
-    git checkout -b $newBranch develop -q
+    git checkout -b "$newBranch" develop -q
     
     # replace version in assembly declaration
     $newVersion = $env:GitVersion_AssemblySemFileVer -replace "\." , ", "
@@ -40,19 +42,31 @@ else
 
     # commit changes
     git add -A 2>&1
-    git commit -m $commitMessage -q
-    git push --set-upstream origin $newBranch
-    git push origin -q
+    git commit -m"$commitMessage" -m"[version update]" -q
+    git push --set-upstream origin "$newBranch" --porcelain -q > $null
  
     # start PR
-    $prRequestBody = "{ ""title"": ""$commitMessage"", ""body"": ""$commitMessage"", ""head"": ""$newBranch"", ""base"": ""develop"" }"
+    $prRequestBody = @{title="$commitMessage";body="$commitMessage`n[version update]";head="$newBranch";base="develop"} | ConvertTo-Json
     $githubApiEndpoint = "https://api.github.com/repos/nanoframework/nf-interpreter/pulls"
-    $webClient = New-Object System.Net.WebClient
-    $webClient.Headers.Add("User-Agent", "User-Agent: Mozilla/4.0 (compatible; MSIE 7.0;)") 
-    $webClient.Headers.add('Authorization', "Basic $env:GitHubToken")
-    $webClient.Headers.add('Content', "application/json")
-    $webClient.UploadString($githubApiEndpoint, 'POST', $prRequestBody)
+    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
+    try 
+    {
+        $result = Invoke-RestMethod -Method Post -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::InternetExplorer -Uri  $githubApiEndpoint -Header @{"Authorization"="Basic $env:GitRestAuth"} -ContentType "application/json" -Body $prRequestBody
+        'Started PR with version update...' | Write-Host -ForegroundColor White -NoNewline
+        'OK' | Write-Host -ForegroundColor Green
+    }
+    catch 
+    {
+        $result = $_.Exception.Response.GetResponseStream()
+        $reader = New-Object System.IO.StreamReader($result)
+        $reader.BaseStream.Position = 0
+        $reader.DiscardBufferedData()
+        $responseBody = $reader.ReadToEnd();
+
+        "Error starting PR: $responseBody" | Write-Host -ForegroundColor Red
+    }
 
     # move back to home folder
-    cd ..
+    &  cd .. > $null
 }
