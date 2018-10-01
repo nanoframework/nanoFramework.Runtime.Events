@@ -8,7 +8,6 @@ else
     # updated assembly info files   
     git add "source\Properties\AssemblyInfo.cs"
     git commit -m "Update assembly info file for v$env:GitVersion_NuGetVersionV2"
-    # need to wrap the git command bellow so it doesn't throw an error because of redirecting the output to stderr
     git push origin --porcelain -q > $null
     
     'Updated assembly info...' | Write-Host -ForegroundColor White -NoNewline
@@ -19,8 +18,8 @@ else
     cd nf-interpreter
 
     # new branch name
-    $newBranch = "nfbot/$env:APPVEYOR_REPO_BRANCH/update-version/$env:GitVersion_NuGetVersionV2" 
-    
+    $newBranch = "$env:APPVEYOR_REPO_BRANCH-nfbot/update-version/nanoFramework.Runtime.Events/$env:GitVersion_NuGetVersionV2"
+
     # create branch to perform updates
     git checkout -b "$newBranch" develop -q
     
@@ -46,7 +45,7 @@ else
     git push --set-upstream origin "$newBranch" --porcelain -q > $null
  
     # start PR
-    $prRequestBody = @{title="$commitMessage";body="$commitMessage`n[version update]";head="$newBranch";base="develop"} | ConvertTo-Json
+    $prRequestBody = @{title="$commitMessage";body="$commitMessage`nStarted with https://github.com/$env:APPVEYOR_REPO_NAME/commit/$env:APPVEYOR_REPO_COMMIT`n[version update]";head="$newBranch";base="develop"} | ConvertTo-Json
     $githubApiEndpoint = "https://api.github.com/repos/nanoframework/nf-interpreter/pulls"
     [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
