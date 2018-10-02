@@ -6,7 +6,7 @@ if ($env:appveyor_pull_request_number)
 else
 {
     # updated assembly info files   
-    git add "source\Properties\AssemblyInfo.cs"
+    git add "source\nanoFramework.Runtime.Events\Properties\AssemblyInfo.cs"
     git commit -m "Update assembly info file for v$env:GitVersion_NuGetVersionV2"
     git push origin --porcelain -q > $null
     
