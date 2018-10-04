@@ -84,7 +84,7 @@
   - provider: GitHub
     tag: v$(GitVersion_NuGetVersionV2)
     release: nanoFramework Runtime.Events Library v$(gitversion_semver)
-    description: 'Check the [changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/blob/master/CHANGELOG.md)\n\n## Install from NuGet\n\nThe following NuGet packages are available for download from this release\n\n:package: [.NET](https://www.nuget.org/packages/nanoFramework.CoreLibrary/$(GitVersion_NuGetVersionV2)) v$(GitVersion_NuGetVersionV2)'
+    description: 'Check the [changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/blob/master/CHANGELOG.md)\n\n## Install from NuGet\n\nThe following NuGet packages are available for download from this release\n\n:package: [.NET](https://www.nuget.org/packages/nanoFramework.Runtime.Events/$(GitVersion_NuGetVersionV2)) v$(GitVersion_NuGetVersionV2)'
     auth_token:
       secure: DNixoFFE+pGlwyhj7McfZoln42vOmj0iY1iNV9zXEr3y0NpXlOIgL8k5ehzlFM1S
     artifact: Nuget_Packages
@@ -94,7 +94,11 @@
 
   # requires APPVEYOR_DISCORD_WEBHOOK_URL enviroment variable set with Discord webhook URL
   on_failure:
-  - ps: .\appveyor-discord.ps1 failure $env:APPVEYOR_DISCORD_WEBHOOK_URL
+    - ps: |
+
+          cd $env:APPVEYOR_BUILD_FOLDER
+
+          .\appveyor-discord.ps1 failure $env:APPVEYOR_DISCORD_WEBHOOK_URL
 
   cache:
     - source\packages -> **source\packages.config
@@ -187,7 +191,7 @@
   - provider: GitHub
     tag: v$(GitVersion_NuGetVersionV2)
     release: nanoFramework Runtime.Events Library v$(gitversion_semver)
-    description: 'Check the [changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/blob/develop/CHANGELOG.md)\n\n## Install from nanoFramework MyGet development feed\n\nThe following NuGet packages are available for download from this release\n\npackage: [.NET](https://www.myget.org/feed/nanoframework-dev/package/nuget/nanoFramework.CoreLibrary/$(GitVersion_NuGetVersionV2)) v$(GitVersion_NuGetVersionV2)'
+    description: 'Check the [changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/blob/develop/CHANGELOG.md)\n\n## Install from nanoFramework MyGet development feed\n\nThe following NuGet packages are available for download from this release\n\npackage: [.NET](https://www.myget.org/feed/nanoframework-dev/package/nuget/nanoFramework.Runtime.Events/$(GitVersion_NuGetVersionV2)) v$(GitVersion_NuGetVersionV2)'
     auth_token:
       secure: DNixoFFE+pGlwyhj7McfZoln42vOmj0iY1iNV9zXEr3y0NpXlOIgL8k5ehzlFM1S
     artifact: Nuget_Packages
@@ -203,7 +207,11 @@
 
   # requires APPVEYOR_DISCORD_WEBHOOK_URL enviroment variable set with Discord webhook URL
   on_failure:
-  - ps: .\appveyor-discord.ps1 failure $env:APPVEYOR_DISCORD_WEBHOOK_URL
+    - ps: |
+
+          cd $env:APPVEYOR_BUILD_FOLDER
+
+          .\appveyor-discord.ps1 failure $env:APPVEYOR_DISCORD_WEBHOOK_URL
 
   cache:
     - source\packages -> **source\packages.config
@@ -220,9 +228,6 @@
   image: Visual Studio 2017
 
   skip_branch_with_pr: true
-
-  # OK to get only last commit as we don't need history
-  clone_depth: 1
 
   # Skipping commits affecting specific files
   skip_commits:
@@ -250,6 +255,13 @@
       secure: i/2hGsqVMwzdM5yIS4rxOIeG3ftx7su7klWYN80s/fHvgk7A5H2fF3oUTNLcyTbw
     GitRestAuth:
       secure: E3bCMe4LtDdAhHSYRcLp0N6DixJe1m8TNxhYeJW/GnqM3WXdRqsgkHSbwootPjJQtOQJrps4twmzTVzofLSVgPgbzU8PxU0AkJV7zwkyVOE=
+
+  init:
+    - git config --global core.autocrlf true
+    - git config --global credential.helper store
+    - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:GitHubToken):x-oauth-basic@github.com`n"
+    - git config --global user.email "%GitHubUserEmail%"
+    - git config --global user.name "%GitHubUserName%"
 
   install:
     - set PATH=C:\Ruby%RUBY_VERSION%\bin;%PATH%
@@ -286,7 +298,7 @@
   - provider: GitHub
     tag: v$(GitVersion_NuGetVersionV2)
     release: nanoFramework Runtime.Events Library v$(gitversion_semver)
-    description: 'Check the [changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/blob/$(appveyor_repo_branch)/CHANGELOG.md)\n\n## Install from nanoFramework MyGet development feed\n\nThe following NuGet packages are available for download from this release\n\n:package: [.NET](https://www.myget.org/feed/nanoframework-dev/package/nuget/nanoFramework.CoreLibrary/$(GitVersion_NuGetVersionV2)) v$(GitVersion_NuGetVersionV2)'
+    description: 'Check the [changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/blob/$(appveyor_repo_branch)/CHANGELOG.md)\n\n## Install from nanoFramework MyGet development feed\n\nThe following NuGet packages are available for download from this release\n\n:package: [.NET](https://www.myget.org/feed/nanoframework-dev/package/nuget/nanoFramework.Runtime.Events/$(GitVersion_NuGetVersionV2)) v$(GitVersion_NuGetVersionV2)'
     auth_token:
       secure: DNixoFFE+pGlwyhj7McfZoln42vOmj0iY1iNV9zXEr3y0NpXlOIgL8k5ehzlFM1S
     artifact: Nuget_Packages
@@ -302,7 +314,11 @@
 
   # requires APPVEYOR_DISCORD_WEBHOOK_URL enviroment variable set with Discord webhook URL
   on_failure:
-  - ps: .\appveyor-discord.ps1 failure $env:APPVEYOR_DISCORD_WEBHOOK_URL
+    - ps: |
+
+          cd $env:APPVEYOR_BUILD_FOLDER
+
+          .\appveyor-discord.ps1 failure $env:APPVEYOR_DISCORD_WEBHOOK_URL
 
   cache:
     - source\packages -> **source\packages.config
