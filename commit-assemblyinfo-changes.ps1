@@ -28,7 +28,7 @@ else
     $newVersion = "{ $newVersion }"
     
     $versionRegex = "\{\s*\d+\,\s*\d+\,\s*\d+\,\s*\d+\s*}"
-    $assemblyFiles = (Get-ChildItem ".\src\CLR\Runtime.Events\nf_rt_events_native.cpp" -Recurse)
+    $assemblyFiles = (Get-ChildItem -Path ".\*" -Include "nf_rt_events_native.cpp" -Recurse)
 
     foreach($file in $assemblyFiles)
     {
@@ -42,7 +42,7 @@ else
 
     if ($repoStatus -eq "") 
     {
-        # nothting changed
+        # nothing changed
         cd ..
     }
     else
