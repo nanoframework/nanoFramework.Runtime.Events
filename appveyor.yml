@@ -100,7 +100,7 @@
 
           .\appveyor-discord.ps1 failure $env:APPVEYOR_DISCORD_WEBHOOK_URL
 
-  after_deploy:
+  on_success:
     - dotnet tool install --global NuKeeper
     - ps: .\update-dependencies.ps1
 
@@ -182,7 +182,7 @@
 
       msbuild source\nanoFramework.Runtime.Events.sln /p:Configuration=Release /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
-  on_success:
+  after_deploy:
   # for this environment variable to work here it has to be set in AppVeyor UI
   - nuget push source\Nuget.nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.%GitVersion_NuGetVersionV2%.nupkg %MyGetToken% -Source https://www.myget.org/F/nanoframework-dev/api/v2/package
   - nuget push source\Nuget.nanoFramework.Runtime.Events.DELIVERABLES\bin\Release\nanoFramework.Runtime.Events.DELIVERABLES.%GitVersion_NuGetVersionV2%.nupkg %MyGetToken% -Source https://www.myget.org/F/nanoframework-dev/api/v2/package
@@ -217,7 +217,7 @@
 
           .\appveyor-discord.ps1 failure $env:APPVEYOR_DISCORD_WEBHOOK_URL
 
-  after_deploy:
+  on_success:
     - dotnet tool install --global NuKeeper
     - ps: .\update-dependencies.ps1
 
@@ -293,7 +293,7 @@
 
       msbuild source\nanoFramework.Runtime.Events.sln /p:Configuration=Release /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
 
-  on_success:
+  after_deploy:
   # for this environment variable to work here it has to be set in AppVeyor UI
   - nuget push source\Nuget.nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.%GitVersion_NuGetVersionV2%.nupkg %MyGetToken% -Source https://www.myget.org/F/nanoframework-dev/api/v2/package
   - nuget push source\Nuget.nanoFramework.Runtime.Events.DELIVERABLES\bin\Release\nanoFramework.Runtime.Events.DELIVERABLES.%GitVersion_NuGetVersionV2%.nupkg %MyGetToken% -Source https://www.myget.org/F/nanoframework-dev/api/v2/package
@@ -328,7 +328,7 @@
 
           .\appveyor-discord.ps1 failure $env:APPVEYOR_DISCORD_WEBHOOK_URL
 
-  after_deploy:
+  on_success:
     - dotnet tool install --global NuKeeper
     - ps: .\update-dependencies.ps1
 
