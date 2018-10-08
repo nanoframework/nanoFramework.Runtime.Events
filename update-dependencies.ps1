@@ -16,13 +16,14 @@ else
 
     $librariesToUpdate =    ("lib-Windows.Devices.Gpio", 
                             "lib-nanoFramework.System.Net",
-                            "lib-Windows.Devices.WiFi ")
+                            "lib-Windows.Devices.WiFi")
 
     ForEach($library in $librariesToUpdate)
     {
         # init/reset these
         $commitMessage = ""
         $prTitle = ""
+        $projectPath = ""
         $newBranchName = "$env:APPVEYOR_REPO_BRANCH-nfbot/update-dependencies"
     
         "Updating $library" | Write-Host -ForegroundColor White
@@ -76,10 +77,13 @@ else
                 $packageTargetVersion = $packageDetails.captures.Groups[6].Value.Trim();
     
                 # update package
-                $updatePackage = nuget update $solutionFile[0].FullName -Source https://www.myget.org/F/nanoframework-dev/api/v3/index.json -Source https://api.nuget.org/v3/index.json
+                $updatePackage = nuget update $solutionFile[0].FullName -Source https://www.myget.org/F/nanoframework-dev/api/v3/index.json -Source https://api.nuget.org/v3/index.json $updatePackage = nuget update $solutionFile[0].FullName -Source https://www.myget.org/F/nanoframework-dev/api/v3/index.json -Source https://api.nuget.org/v3/index.json -Id $packageName -Version $packageTargetVersion 
 
-                #  grab csproj from update output
-                $projectPath = [regex]::Match($updatePackage, "((project ')(.*)(', targeting))").captures.Groups[3].Value
+                #  grab csproj from update output, if not already there
+                if($projectPath -eq "")
+                {
+                    $projectPath = [regex]::Match($updatePackage, "((project ')(.*)(', targeting))").captures.Groups[3].Value
+                }
 
                 # replace NFMDP_PE_LoadHints
                 $filecontent = Get-Content($projectPath)
@@ -99,11 +103,15 @@ else
 
                     foreach ($node in $nodes)
                     {
-                        $name = $node.Name;
-
-                        if(($node.Name -eq "ItemGroup") -and (($node.ChildNodes[0].Name -eq "Dependency") -and $node.ChildNodes[0].Attributes["Include"].value -eq $packageName))
+                        if($node.Name -eq "ItemGroup")
                         {
-                            $node.ChildNodes[0].ChildNodes[0].innertext = "[$packageTargetVersion]"
+                            foreach ($itemGroup in $node.ChildNodes)
+                            {
+                                if($itemGroup.Name -eq "Dependency" -and $itemGroup.Attributes["Include"].value -eq $packageName)
+                                {
+                                    $itemGroup.ChildNodes[0].innertext = "[$packageTargetVersion]"
+                                }
+                            }
                         }
                     }
 
