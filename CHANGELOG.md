@@ -16,6 +16,7 @@
 
 **Documentation and other chores:**
 
+- 📦 Bumps nanoFramework.CoreLibrary from 1.0.1-preview116 to 1.0.1-preview118 [\#25](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/25)
 - 📦 Bumps nanoFramework.CoreLibrary from 1.0.1-preview103 to 1.0.1-preview116 [\#24](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/24)
 - Bump nanoFramework.CoreLibrary from 1.0.0-preview073 to 1.0.1-preview094 in /source [\#18](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/18)
 - Fix nuget version dependency [\#16](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/16)
