@@ -96,9 +96,13 @@
   on_failure:
     - ps: |
 
-          cd $env:APPVEYOR_BUILD_FOLDER
+          &  cd $env:APPVEYOR_BUILD_FOLDER > $null
 
           .\appveyor-discord.ps1 failure $env:APPVEYOR_DISCORD_WEBHOOK_URL
+
+  after_deploy:
+    - dotnet tool install --global NuKeeper
+    - ps: .\update-dependencies.ps1
 
   cache:
     - source\packages -> **source\packages.config
@@ -209,9 +213,13 @@
   on_failure:
     - ps: |
 
-          cd $env:APPVEYOR_BUILD_FOLDER
+          &  cd $env:APPVEYOR_BUILD_FOLDER > $null
 
           .\appveyor-discord.ps1 failure $env:APPVEYOR_DISCORD_WEBHOOK_URL
+
+  after_deploy:
+    - dotnet tool install --global NuKeeper
+    - ps: .\update-dependencies.ps1
 
   cache:
     - source\packages -> **source\packages.config
@@ -316,9 +324,13 @@
   on_failure:
     - ps: |
 
-          cd $env:APPVEYOR_BUILD_FOLDER
+          &  cd $env:APPVEYOR_BUILD_FOLDER > $null
 
           .\appveyor-discord.ps1 failure $env:APPVEYOR_DISCORD_WEBHOOK_URL
+
+  after_deploy:
+    - dotnet tool install --global NuKeeper
+    - ps: .\update-dependencies.ps1
 
   cache:
     - source\packages -> **source\packages.config
