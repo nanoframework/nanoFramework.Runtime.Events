@@ -49,8 +49,8 @@ else
         if ($packageCount -gt 0)
         {
             # get packages to update
-            $packageListRaw = [regex]::Match($nukeeperInspect, "(?>possible updates([^$]*)Found)").captures.Groups[1].Value;
-            [array]$packageList = $packageListRaw.Split([Environment]::NewLine, [StringSplitOptions]::RemoveEmptyEntries).Replace([Environment]::NewLine, "")
+            $packageListRaw = $packageListRaw = [regex]::Match($nukeeperInspect, "(?>possible updates([^$]*)(?=Found))").captures.Groups[1].value -replace "(\\packages.config)", [Environment]::NewLine
+            [array]$packageList = $packageListRaw -split [Environment]::NewLine
 
             # restore NuGet packages, need to do this before anything else
             nuget restore $solutionFile[0] -Source https://www.myget.org/F/nanoframework-dev/api/v3/index.json -Source https://api.nuget.org/v3/index.json
