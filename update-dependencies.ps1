@@ -10,6 +10,10 @@ else
 {
     # update dependencies for class libraries that depend Runtime.Events and mscorlib
 
+    # because it can take sometime for the package to become available on the NuGet providers
+    # need to hange here for 5 minutes
+    Start-Sleep -Milliseconds 5000
+
     $librariesToUpdate =    ("lib-Windows.Devices.Gpio", 
                             "lib-nanoFramework.System.Net",
                             "lib-Windows.Devices.WiFi ")
