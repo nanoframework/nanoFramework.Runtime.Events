@@ -49,7 +49,7 @@ else
         if ($packageCount -gt 0)
         {
             # get packages to update
-            $packageListRaw = $packageListRaw = [regex]::Match($nukeeperInspect, "(?>possible updates([^$]*)(?=Found))").captures.Groups[1].value -replace "(\\packages.config)", [Environment]::NewLine
+            $packageListRaw = [regex]::Match($nukeeperInspect, "(?>possible updates([^$]*)(?=Found))").captures.Groups[1].value -replace "(\\packages.config)",  [Environment]::NewLine
             [array]$packageList = $packageListRaw -split [Environment]::NewLine
 
             # restore NuGet packages, need to do this before anything else
@@ -66,6 +66,9 @@ else
             # update all packages
             foreach ($package in $packageList)
             {
+                # handle empty packages
+                if($package.Trim() -eq "") {continue}
+                
                 # get package name and target version
                 $packageDetails = [regex]::Match($package, "(.*)(( from)(.*)(to )(.*)( in))")
                 $packageName = $packageDetails.captures.Groups[1].Value.Trim();
