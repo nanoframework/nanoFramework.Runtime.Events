@@ -11,8 +11,8 @@ else
     # update dependencies for class libraries that depend Runtime.Events and mscorlib
 
     # because it can take sometime for the package to become available on the NuGet providers
-    # need to hange here for 5 minutes
-    Start-Sleep -Milliseconds 5000 * 60
+    # need to hange here for 5 minutes (5 * 60 * 1000)
+    Start-Sleep -Milliseconds 300000
 
     $librariesToUpdate =    ("lib-Windows.Devices.Gpio", 
                             "lib-nanoFramework.System.Net",
@@ -41,7 +41,7 @@ else
         $solutionFile = (Get-ChildItem -Path ".\" -Include "*.sln" -Recurse)
 
         # run NuKeeper inspect
-        if ($string -like '*release*' -or $string -like '*master*')
+        if ($env:APPVEYOR_REPO_BRANCH -like '*release*' -or $string -like '*master*')
         {
             # use NuGet ONLY for release and master branches
             $nukeeperInspect = NuKeeper inspect --source https://api.nuget.org/v3/index.json
@@ -51,6 +51,9 @@ else
             # use NuGet and MyGet for all others
             $nukeeperInspect = NuKeeper inspect
         }
+
+        "NuGet update inspection result:" | Write-Host -ForegroundColor Blue
+        $nukeeperInspect | Write-Host -ForegroundColor White
 
         $packageCountMatch = [regex]::Match($nukeeperInspect, "Found (\d) possible updates").captures.groups[1].value
         [int]$packageCount = 0
