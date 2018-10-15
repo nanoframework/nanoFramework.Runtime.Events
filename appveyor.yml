@@ -64,10 +64,8 @@ build_script:
 - ps: >-
 
     msbuild source\nanoFramework.Runtime.Events.sln /p:Configuration=Release /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
-
-artifacts:
-- path: '**\bin\Release\*.nupkg'
-  name: Nuget_Packages
+    
+    Push-AppveyorArtifact $env:APPVEYOR_BUILD_FOLDER\source\Nuget.nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.$env:GitVersion_NuGetVersionV2.nupkg
 
 before_deploy:
   - ps:  >-
@@ -101,8 +99,7 @@ for:
 
   deploy:
   - provider: NuGet
-    api_key:
-      secure: NSRDXbS8tmzOy4wStGuO3yQMKI8Sk10vF8iQtz9ZDXEnHfwnuDdnXbr/Kno3MMvY
+    api_key: $(NuGetToken)
     skip_symbols: true
     on:
       appveyor_repo_tag: true
@@ -112,7 +109,7 @@ for:
     description: 'Check the [changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/blob/master/CHANGELOG.md)\n\n## Install from NuGet\n\nThe following NuGet packages are available for download from this release\n\n:package: [.NET](https://www.nuget.org/packages/nanoFramework.Runtime.Events/$(GitVersion_NuGetVersionV2)) v$(GitVersion_NuGetVersionV2)'
     auth_token:
       secure: DNixoFFE+pGlwyhj7McfZoln42vOmj0iY1iNV9zXEr3y0NpXlOIgL8k5ehzlFM1S
-    artifact: Nuget_Packages
+    artifact:
     draft: true
     prerelease: true
     force_update: true
@@ -148,8 +145,7 @@ for:
 
   deploy:
   - provider: NuGet
-    api_key:
-      secure: NSRDXbS8tmzOy4wStGuO3yQMKI8Sk10vF8iQtz9ZDXEnHfwnuDdnXbr/Kno3MMvY
+    api_key: $(NuGetToken)
     skip_symbols: true
     on:
       appveyor_repo_tag: true
@@ -159,7 +155,7 @@ for:
     description: 'Check the [changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/blob/$(appveyor_repo_branch)/CHANGELOG.md)\n\n## Install from NuGet\n\nThe following NuGet packages are available for download from this release\n\n:package: [.NET](https://www.nuget.org/packages/nanoFramework.Runtime.Events/$(GitVersion_NuGetVersionV2)) v$(GitVersion_NuGetVersionV2)'
     auth_token:
       secure: DNixoFFE+pGlwyhj7McfZoln42vOmj0iY1iNV9zXEr3y0NpXlOIgL8k5ehzlFM1S
-    artifact: Nuget_Packages
+    artifact:
     draft: true
     prerelease: true
     force_update: true
