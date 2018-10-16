@@ -7,7 +7,11 @@ branches:
 
 image: Visual Studio 2017
 
+skip_tags: false
+
 skip_branch_with_pr: true
+
+test: off
 
 # Skipping commits affecting specific files
 skip_commits:
@@ -20,8 +24,6 @@ skip_commits:
 
 build:
   verbosity: minimal
-
-test: off
 
 environment:
   APPVEYOR_SAVE_CACHE_ON_ERROR: true
@@ -64,14 +66,14 @@ build_script:
 - ps: >-
 
     msbuild source\nanoFramework.Runtime.Events.sln /p:Configuration=Release /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll"
-    
-    Push-AppveyorArtifact $env:APPVEYOR_BUILD_FOLDER\source\Nuget.nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.$env:GitVersion_NuGetVersionV2.nupkg
 
 before_deploy:
   - ps:  >-
       .\commit-assemblyinfo-changes.ps1
       
       .\generate-change-log.ps1
+
+      Push-AppveyorArtifact $env:APPVEYOR_BUILD_FOLDER\source\Nuget.nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.$env:GitVersion_NuGetVersionV2.nupkg
 
 # requires APPVEYOR_DISCORD_WEBHOOK_URL enviroment variable set with Discord webhook URL
 on_failure:
@@ -111,15 +113,15 @@ for:
       secure: DNixoFFE+pGlwyhj7McfZoln42vOmj0iY1iNV9zXEr3y0NpXlOIgL8k5ehzlFM1S
     artifact:
     draft: true
-    prerelease: true
+    prerelease: false
     force_update: true
+    on:
+      appveyor_repo_tag: true
 
 -
   branches:
     only:
       - /dev.*/
-  
-  skip_branch_with_pr: true
 
   deploy:
   - provider: GitHub
@@ -132,6 +134,8 @@ for:
     draft: true
     prerelease: true
     force_update: true
+    on:
+      appveyor_repo_tag: true
 
   after_deploy:
   # for this environment variable to work here it has to be set in AppVeyor UI
@@ -159,3 +163,5 @@ for:
     draft: true
     prerelease: true
     force_update: true
+    on:
+      appveyor_repo_tag: true
