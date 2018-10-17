@@ -74,7 +74,7 @@ namespace nanoFramework.Runtime.Events
         // Developer notes from original code
         // Add/RemoveEventFilter/Listener/Processor today supports only one listener and one filter
         // to reduce complexity, but this will certainly be not the case in future when
-        // multiple parties will want to listent or filter same EventCategory. This was
+        // multiple parties will want to listen or filter same EventCategory. This was
         // one of the request from SideShow team, we will have to look into that.
         //
 

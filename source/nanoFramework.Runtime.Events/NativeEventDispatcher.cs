@@ -23,12 +23,12 @@ namespace nanoFramework.Runtime.Events
     public class NativeEventDispatcher : IDisposable
     {
         /// <summary>
-        /// The event handler for this <see cref="NativeEventDispatcher"/> object (a mulitcast combinable delegate).
+        /// The event handler for this <see cref="NativeEventDispatcher"/> object (a multicast combinable delegate).
         /// </summary>
         protected NativeEventHandler threadSpawn = null;
 
         /// <summary>
-        /// The event handler for this <see cref="NativeEventDispatcher"/> object (a mulitcast combinable delegate).
+        /// The event handler for this <see cref="NativeEventDispatcher"/> object (a multicast combinable delegate).
         /// </summary>
         protected NativeEventHandler callbacks = null;
 
