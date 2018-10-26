@@ -17,8 +17,8 @@ else
     'OK' | Write-Host -ForegroundColor Green
 }
 
-# update assembly info in nf-interpreter if we are in development branch or if this is tag (master OR release)
-if ($env:APPVEYOR_REPO_BRANCH -match "^dev*" -or $env:APPVEYOR_REPO_TAG -eq "true")
+# update assembly info in nf-interpreter if this is tag
+if ($env:APPVEYOR_REPO_TAG -eq "true")
 {
     'Updating assembly version in nf-interpreter...' | Write-Host -ForegroundColor White -NoNewline
 

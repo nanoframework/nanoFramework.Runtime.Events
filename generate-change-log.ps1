@@ -2,10 +2,7 @@
 # See LICENSE file in the project root for full license information.
 
 # skip generating the change log when build is a pull-request or not a tag (can't commit when repo is in a tag)
-if ($env:appveyor_pull_request_number -or 
-    ($env:APPVEYOR_REPO_BRANCH -eq "master" -and $env:APPVEYOR_REPO_TAG -eq 'true') -or
-    ($env:APPVEYOR_REPO_BRANCH -match "^release*" -and $env:APPVEYOR_REPO_TAG -eq 'true') -or
-    $env:APPVEYOR_REPO_TAG -eq "true")
+if ($env:appveyor_pull_request_number -or $env:APPVEYOR_REPO_TAG -eq "true")
 {
     'Skip change log processing...' | Write-Host -ForegroundColor White
 }
