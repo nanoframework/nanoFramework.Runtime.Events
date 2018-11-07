@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>nanoFramework.Runtime.Events</id>
+    <version>$version$</version>
+    <title>nanoFramework.Runtime.Events</title>
+    <authors>nanoFramework project contributors</authors>
+    <owners>nanoFramework project contributors</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <releaseNotes></releaseNotes>
+    <developmentDependency>false</developmentDependency>
+    <projectUrl>https://github.com/nanoframework</projectUrl>
+    <iconUrl>https://secure.gravatar.com/avatar/97d0e092247f0716db6d4b47b7d1d1ad</iconUrl>
+    <copyright>Copyright (c) 2018 The nanoFramework project contributors</copyright>    
+    <description>This package includes the nanoFramework.Runtime.Events assembly for nanoFramework C# projects.</description>
+    <summary>nanoFramework.Runtime.Events assembly for nanoFramework C# projects</summary>
+    <tags>nanoFramework C# csharp netmf netnf nanoFramework.Runtime.Events</tags>
+    <dependencies>
+      <dependency id="nanoFramework.CoreLibrary" version="[1.0.5-preview024]" />
+    </dependencies>    
+  </metadata>
+  <files>
+    <file src="nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.dll" target="lib\nanoFramework.Runtime.Events.dll" />
+    <file src="nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.pdb" target="lib\nanoFramework.Runtime.Events.pdb" />
+    <file src="nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.pdbx" target="lib\nanoFramework.Runtime.Events.pdbx" />
+    <file src="nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.pe" target="lib\nanoFramework.Runtime.Events.pe" />
+    <file src="nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.xml" target="lib\nanoFramework.Runtime.Events.xml" /> 
+  </files>
+</package>
