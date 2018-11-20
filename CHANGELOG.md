@@ -1,8 +1,7 @@
 # Change Log
 
-## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/HEAD)
-
-[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.2-preview-004...HEAD)
+## [v1.0.2-preview-011](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.2-preview-011) (2018-11-19)
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.2-preview-004...v1.0.2-preview-011)
 
 **Documentation and other chores:**
 
