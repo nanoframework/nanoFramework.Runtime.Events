@@ -97,17 +97,17 @@ else
                 $packageOriginVersion = $package[1]
     
                 # update package, only on the first pass
-                if($updatePackage -eq $null)
+                if($updatePackageOutput -eq $null)
                 {
                     if ($env:APPVEYOR_REPO_BRANCH -like '*release*' -or $env:APPVEYOR_REPO_BRANCH -like '*master*')
                     {
                         # don't allow prerelease for release and master branches
-                        $updatePackage = nuget update $solutionFile[0].FullName -Source https://api.nuget.org/v3/index.json -Source https://api.nuget.org/v3/index.json
+                        $updatePackageOutput = nuget update $solutionFile[0].FullName -Source https://api.nuget.org/v3/index.json -Source https://api.nuget.org/v3/index.json
                     }
                     else
                     {
                         # allow prerelease for all others
-                        $updatePackage = nuget update $solutionFile[0].FullName -Source https://www.myget.org/F/nanoframework-dev/api/v3/index.json -Source https://api.nuget.org/v3/index.json -PreRelease
+                        $updatePackageOutput = nuget update $solutionFile[0].FullName -Source https://www.myget.org/F/nanoframework-dev/api/v3/index.json -Source https://api.nuget.org/v3/index.json -PreRelease
                     }
                 }
 
@@ -187,6 +187,9 @@ else
 
                 # build PR title
                 $prTitle = "Bumps $packageName from $packageOriginVersion to $packageTargetVersion"
+
+                #clear 
+                $updatePackageOutput = $null
             }
 
             # rename csproj files back to nfproj
