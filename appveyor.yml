@@ -77,8 +77,6 @@ before_deploy:
   - nuget pack source\nanoFramework.Runtime.Events.DELIVERABLES.nuspec -Version %MyNuGetVersion%
   - ps:  >-
       .\commit-assemblyinfo-changes.ps1
-      
-      .\generate-change-log.ps1
 
       Push-AppveyorArtifact $env:APPVEYOR_BUILD_FOLDER\nanoFramework.Runtime.Events.$env:MyNuGetVersion.nupkg
 
