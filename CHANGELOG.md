@@ -1,5 +1,12 @@
 # Change Log
 
+## [v1.0.2-preview-023](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.2-preview-023) (2018-12-03)
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.2-preview-021...v1.0.2-preview-023)
+
+**Implemented enhancements:**
+
+- Add CAN event [\#46](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/46)
+
 ## [v1.0.2-preview-021](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.2-preview-021) (2018-11-30)
 [Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.2-preview-017...v1.0.2-preview-021)
 
