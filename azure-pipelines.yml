@@ -55,8 +55,9 @@ steps:
   inputs:
     gitHubToken: $(GitHubToken)
     repositoriesToUpdate: |
-      lib-Windows.Devices.Gpio
+      lib-nanoFramework.Devices.Can
       lib-nanoFramework.System.Net
+      lib-Windows.Devices.Gpio
       lib-Windows.Devices.WiFi
   condition: and( succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/v') )
   displayName: Update dependent class libs
