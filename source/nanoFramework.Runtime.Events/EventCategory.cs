@@ -34,6 +34,10 @@ namespace nanoFramework.Runtime.Events
         /// <summary>
         /// Specifies a WiFi event.
         /// </summary>
-        WiFi = 50
+        WiFi = 50,
+        /// <summary>
+        /// Specifies a CAN event.
+        /// </summary>
+        Can = 60
     }
 }
