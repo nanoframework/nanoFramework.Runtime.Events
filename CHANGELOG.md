@@ -12,6 +12,7 @@
 ## [v1.0.2](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.2) (2018-12-14)
 [Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.2-preview-023...v1.0.2)
 
+## [v1.0.0](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.0) (2018-10-17)
 **Documentation and other chores:**
 
 - Release v1.0.2 [\#48](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/48)
