@@ -12,8 +12,8 @@
 
 | Component | Build Status | NuGet Package |
 |:-|---|---|
-| nanoFramework.Runtime.Events | [![Build status](https://ci.appveyor.com/api/projects/status/oa7157hk8ahjgqfr/branch/master?svg=true)](https://ci.appveyor.com/project/nfbot/lib-nanoframework-runtime-events/branch/master) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.Runtime.Events.svg)](https://www.nuget.org/packages/nanoFramework.Runtime.Events/)  |
-| nanoFramework.Runtime.Events (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Runtime.Events/_apis/build/status/nanoframework.lib-nanoFramework.Runtime.Events)](https://dev.azure.com/nanoframework/nanoFramework.Runtime.Events/_build/latest?definitionId=22) | [![MyGet Pre Release](https://img.shields.io/myget/nanoframework-dev/vpre/nanoFramework.Runtime.Events.svg)](https://www.myget.org/feed/nanoframework-dev/package/nuget/nanoFramework.Runtime.Events) |
+| nanoFramework.Runtime.Events | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Runtime.Events/_apis/build/status/nanoframework.lib-nanoFramework.Runtime.Events?branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.Runtime.Events/_build/latest?definitionId=22?branchName=master) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.Runtime.Events.svg)](https://www.nuget.org/packages/nanoFramework.Runtime.Events/)  |
+| nanoFramework.Runtime.Events (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Runtime.Events/_apis/build/status/nanoframework.lib-nanoFramework.Runtime.Events?branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.Runtime.Events/_build/latest?definitionId=22?branchName=develop) | [![MyGet Pre Release](https://img.shields.io/myget/nanoframework-dev/vpre/nanoFramework.Runtime.Events.svg)](https://www.myget.org/feed/nanoframework-dev/package/nuget/nanoFramework.Runtime.Events) |
 
 
 ## Feedback and documentation
