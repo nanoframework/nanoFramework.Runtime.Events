@@ -1,5 +1,13 @@
 # Change Log
 
+## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/HEAD)
+
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.4...HEAD)
+
+**Implemented enhancements:**
+
+- Add Storage event [\#52](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/52)
+
 ## [v1.0.4](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.4) (2019-01-21)
 [Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.2...v1.0.4)
 
