@@ -58,7 +58,6 @@ steps:
     repositoriesToUpdate: |
       lib-nanoFramework.Devices.Can
       lib-nanoFramework.System.Net
-      lib-nanoFramework.System.Net.Http
       lib-Windows.Devices.Gpio
       lib-Windows.Devices.WiFi
   condition: and( succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/v') )
