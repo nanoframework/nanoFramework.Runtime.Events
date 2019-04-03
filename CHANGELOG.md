@@ -1,5 +1,16 @@
 # Change Log
 
+## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/HEAD)
+
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.5-preview-008...HEAD)
+
+**Fixed bugs:**
+
+- Add missing value to Storage event category [\#53](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/53)
+
+## [v1.0.5-preview-008](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.5-preview-008) (2019-03-10)
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.5-preview-007...v1.0.5-preview-008)
+
 ## [v1.0.5-preview-007](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.5-preview-007) (2019-03-10)
 [Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.5-preview-005...v1.0.5-preview-007)
 
