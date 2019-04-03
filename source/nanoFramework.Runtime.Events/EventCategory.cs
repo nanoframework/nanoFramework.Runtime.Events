@@ -42,6 +42,6 @@ namespace nanoFramework.Runtime.Events
         /// <summary>
         /// Specifies a Storage event.
         /// </summary>
-        Storage
+        Storage = 70,
     }
 }
