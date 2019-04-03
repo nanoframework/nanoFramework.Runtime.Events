@@ -39,6 +39,7 @@ namespace nanoFramework.Runtime.Events
         /// Specifies a CAN event.
         /// </summary>
         Can = 60,
+
         /// <summary>
         /// Specifies a Storage event.
         /// </summary>
