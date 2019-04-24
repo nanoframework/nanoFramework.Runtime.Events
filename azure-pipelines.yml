@@ -58,6 +58,7 @@ steps:
       lib-Windows.Devices.Gpio
       lib-Windows.Devices.WiFi
       lib-Windows.Devices.SerialCommunication
+      lib-Windows.Storage
   condition: and( succeeded(), startsWith(variables['Build.SourceBranch'], 'refs/tags/v') )
   displayName: Update dependent class libs
 
