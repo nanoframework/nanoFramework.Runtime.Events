@@ -17,7 +17,7 @@
     <summary>nanoFramework.Runtime.Events assembly for nanoFramework C# projects</summary>
     <tags>nanoFramework C# csharp netmf netnf nanoFramework.Runtime.Events</tags>
     <dependencies>
-      <dependency id="nanoFramework.CoreLibrary" version="[1.2.1-preview-013]" />
+      <dependency id="nanoFramework.CoreLibrary" version="[1.2.2-preview.20]" />
     </dependencies>
   </metadata>
   <files>
