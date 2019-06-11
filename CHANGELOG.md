@@ -1,5 +1,13 @@
 # Change Log
 
+## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/HEAD)
+
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.6-preview-001...HEAD)
+
+**Documentation and other chores:**
+
+- Bumps nanoFramework.CoreLibrary from 1.2.1-preview-001 to 1.2.1-preview-013 [\#57](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/57)
+
 ## [v1.0.6-preview-001](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.6-preview-001) (2019-04-24)
 [Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.5-preview-019...v1.0.6-preview-001)
 
