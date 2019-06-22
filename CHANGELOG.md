@@ -2,7 +2,14 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.8-preview.5...HEAD)
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.8-preview.8...HEAD)
+
+**Documentation and other chores:**
+
+- Work on native assembly declaration [\#62](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/62) [[Breaking-Change](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/labels/Breaking-Change)]
+
+## [v1.0.8-preview.8](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.8-preview.8) (2019-06-20)
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.8-preview.5...v1.0.8-preview.8)
 
 **Documentation and other chores:**
 
