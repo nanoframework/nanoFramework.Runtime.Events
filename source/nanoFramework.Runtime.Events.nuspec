@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>nanoFramework.Runtime.Events</id>
@@ -8,17 +8,19 @@
     <owners>nanoFramework project contributors</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">Apache-2.0</license>
-    <releaseNotes></releaseNotes>
+    <releaseNotes>
+    </releaseNotes>
     <developmentDependency>false</developmentDependency>
     <projectUrl>https://github.com/nanoframework/lib-nanoFramework.Runtime.Events</projectUrl>
     <iconUrl>https://secure.gravatar.com/avatar/97d0e092247f0716db6d4b47b7d1d1ad</iconUrl>
     <repository type="git" url="https://github.com/nanoframework/lib-nanoFramework.Runtime.Events" commit="$commit$" />
     <copyright>Copyright (c) 2018 The nanoFramework project contributors</copyright>
-    <description>This package includes the nanoFramework.Runtime.Events assembly for nanoFramework C# projects.&#10;This package requires a target with nanoFramework.Runtime.Events v$nativeVersion$.</description>
+    <description>This package includes the nanoFramework.Runtime.Events assembly for nanoFramework C# projects.
+This package requires a target with nanoFramework.Runtime.Events v$nativeVersion$.</description>
     <summary>nanoFramework.Runtime.Events assembly for nanoFramework C# projects</summary>
     <tags>nanoFramework C# csharp netmf netnf nanoFramework.Runtime.Events</tags>
     <dependencies>
-      <dependency id="nanoFramework.CoreLibrary" version="1.2.6-preview.1" />
+      <dependency id="nanoFramework.CoreLibrary" version="1.2.6-preview.7" />
     </dependencies>
   </metadata>
   <files>
@@ -27,7 +29,6 @@
     <file src="nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.pdbx" target="lib\nanoFramework.Runtime.Events.pdbx" />
     <file src="nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.pe" target="lib\nanoFramework.Runtime.Events.pe" />
     <file src="nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.xml" target="lib\nanoFramework.Runtime.Events.xml" />
-
     <!-- readme -->
     <file src="readme.txt" target="readme.txt" />
   </files>
