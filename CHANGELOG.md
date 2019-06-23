@@ -6,6 +6,7 @@
 
 **Documentation and other chores:**
 
+- Bumps nanoFramework.CoreLibrary from 1.2.6-preview.1 to 1.2.6-preview.7 [\#64](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/64)
 - Work on native assembly declaration [\#62](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/62) [[Breaking-Change](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/labels/Breaking-Change)]
 
 ## [v1.0.8-preview.8](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.8-preview.8) (2019-06-20)
