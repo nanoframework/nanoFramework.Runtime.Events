@@ -10,7 +10,7 @@ API docs: https://docs.nanoframework.net/api/nanoFramework.Runtime.Events.html
 
 Browse our samples repository: https://github.com/nanoframework/samples
 
-Check our documentation online: https://docs.nanoframework.net/content/intro.html
+Check our documentation online: https://docs.nanoframework.net/articles/intro.html
 
 Join our lively Discord community: https://discord.gg/gCyBu8T
 
