@@ -13,11 +13,11 @@ namespace nanoFramework.Runtime.Events
     public class CustomEventArgs : EventArgs
     {
 #pragma warning disable IDE0032 // nanoFramework doesn't support auto-properties
-        private readonly uint _data1;
+        private readonly ushort _data1;
         private readonly uint _data2;
 #pragma warning restore IDE0032 // nanoFramework doesn't support auto-properties
 
-        internal CustomEventArgs(uint data1, uint data2)
+        internal CustomEventArgs(ushort data1, uint data2)
         {
             _data1 = data1;
             _data2 = data2;
@@ -26,7 +26,7 @@ namespace nanoFramework.Runtime.Events
         /// <summary>
         /// Value of 1st field in event.
         /// </summary>
-        public uint Data1 { get => _data1; }
+        public ushort Data1 { get => _data1; }
 
         /// <summary>
         /// Value of 1st field in event.
@@ -49,7 +49,7 @@ namespace nanoFramework.Runtime.Events
 
         internal class CustomEventInternal : BaseEvent
         {
-            public uint Data1;
+            public ushort Data1;
             public uint Data2;
             public DateTime Time;
         }
@@ -65,7 +65,8 @@ namespace nanoFramework.Runtime.Events
             {
                 CustomEventInternal customEvent = new CustomEventInternal
                 {
-                    Data1 = data1,
+                    // Data1 is packed by PostManagedEvent, so we need to unpack the high word.
+                    Data1 = (ushort)(data1 >> 16),
                     Data2 = data2,
                     Time = time
                 };
@@ -75,9 +76,9 @@ namespace nanoFramework.Runtime.Events
 
             public bool OnEvent(BaseEvent ev)
             {
-                if (ev is CustomEventInternal)
+                if (ev is CustomEventInternal myEvent)
                 {
-                    OnCustomEventFiredCallback((CustomEventInternal)ev);
+                    OnCustomEventFiredCallback(myEvent);
                 }
 
                 return true;
