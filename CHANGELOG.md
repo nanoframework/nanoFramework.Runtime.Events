@@ -108,8 +108,10 @@
 
 **Documentation and other chores:**
 
+- Release v1.0.4 [\#51](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/51)
 - Bumps nanoFramework.CoreLibrary from 1.1.0 to 1.1.1 [\#50](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/50)
 - Merge back from Release v1.0.2 [\#49](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/49)
+- Bumps nanoFramework.CoreLibrary from 1.0.4 to 1.0.5-preview024 [\#37](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/37)
 
 ## [v1.0.2](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.2) (2018-12-14)
 [Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.2-preview-023...v1.0.2)
@@ -125,10 +127,6 @@
 **Implemented enhancements:**
 
 - Add CAN event [\#46](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/46)
-
-**Documentation and other chores:**
-
-- Release v1.0.4 [\#51](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/51)
 
 ## [v1.0.2-preview-021](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.2-preview-021) (2018-11-30)
 [Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.2-preview-017...v1.0.2-preview-021)
@@ -159,10 +157,6 @@
 
 ## [v1.0.2-preview-001](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.2-preview-001) (2018-11-07)
 [Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.0...v1.0.2-preview-001)
-
-**Documentation and other chores:**
-
-- Bumps nanoFramework.CoreLibrary from 1.0.4 to 1.0.5-preview024 [\#37](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/37)
 
 ## [v1.0.0](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.0) (2018-10-17)
 **Implemented enhancements:**
