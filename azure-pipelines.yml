@@ -56,6 +56,7 @@ steps:
     gitHubToken: $(GitHubToken)
     repositoriesToUpdate: |
       lib-nanoFramework.Devices.Can
+      lib-nanoFramework.Hardware.Esp32
       lib-nanoFramework.System.Net
       lib-Windows.Devices.Gpio
       lib-Windows.Devices.WiFi
