@@ -50,5 +50,16 @@ namespace nanoFramework.Runtime.Events
         /// Specifies a Storage event.
         /// </summary>
         Storage = 70,
+
+        /// <summary>
+        /// Specifies a Touch Event
+        /// </summary>
+        Touch = 80,
+
+        /// <summary>
+        /// Specifies a Gesture Event
+        /// </summary>
+        Gesture = 90
+
     }
 }

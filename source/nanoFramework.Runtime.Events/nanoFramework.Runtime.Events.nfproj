@@ -57,6 +57,7 @@
   <Import Project="$(NanoFrameworkProjectSystemPath)NFProjectSystem.props" Condition="Exists('$(NanoFrameworkProjectSystemPath)NFProjectSystem.props')" />
   <ItemGroup>
     <Compile Include="EventArgs.cs" />
+    <Compile Include="GenericEventEx.cs" />
     <Compile Include="IEventListener.cs" />
     <Compile Include="IEventProcessor.cs" />
     <Compile Include="GenericEvent.cs" />
