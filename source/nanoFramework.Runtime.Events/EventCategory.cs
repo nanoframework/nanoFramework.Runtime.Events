@@ -11,6 +11,10 @@ namespace nanoFramework.Runtime.Events
     /// </summary>
     public enum EventCategory
     {
+        /////////////////////////////////////////////////////////////////////////////////
+        // !!! KEEP IN SYNC WITH #defines EVENT_nnnn in nanoHAL_v2.h (native code) !!! //
+        /////////////////////////////////////////////////////////////////////////////////
+
         /// <summary>
         /// Specifies an unknown event type.
         /// </summary>
@@ -50,5 +54,11 @@ namespace nanoFramework.Runtime.Events
         /// Specifies a Storage event.
         /// </summary>
         Storage = 70,
+
+        /// <summary>
+        /// Specifies a Radio event.
+        /// </summary>
+        Radio = 80,
+
     }
 }
