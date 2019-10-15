@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // General Information about an assembly is controlled through the following 
@@ -9,6 +8,11 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCompany("nanoFramework Contributors")]
 [assembly: AssemblyProduct("nanoFramework.Runtime.Events")]
 [assembly: AssemblyCopyright("Copyright © nanoFramework Contributors 2017")]
+
+////////////////////////////////////////////////////////////////
+// update this whenever the native assembly signature changes //
+[assembly: AssemblyNativeVersion("100.0.6.0")]
+////////////////////////////////////////////////////////////////
 
 // Setting ComVisible to false makes the types in this assembly not visible 
 // to COM components.  If you need to access a type in this assembly from 

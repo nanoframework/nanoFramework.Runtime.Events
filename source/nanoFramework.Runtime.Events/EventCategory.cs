@@ -11,33 +11,54 @@ namespace nanoFramework.Runtime.Events
     /// </summary>
     public enum EventCategory
     {
+        /////////////////////////////////////////////////////////////////////////////////
+        // !!! KEEP IN SYNC WITH #defines EVENT_nnnn in nanoHAL_v2.h (native code) !!! //
+        /////////////////////////////////////////////////////////////////////////////////
+
         /// <summary>
         /// Specifies an unknown event type.
         /// </summary>
         Unknown = 0,
+
         /// <summary>
         /// Specifies a programmer-defined event.
         /// </summary>
         Custom = 10,
+
         /// <summary>
         /// Specifies a GPIO event.
         /// </summary>
         Gpio = 20,
+        
         /// <summary>
         /// Specifies a SerialDevice event.
         /// </summary>
         SerialDevice = 30,
+        
         /// <summary>
         /// Specifies a Network event.
         /// </summary>
         Network = 40,
+        
         /// <summary>
         /// Specifies a WiFi event.
         /// </summary>
         WiFi = 50,
+        
         /// <summary>
         /// Specifies a CAN event.
         /// </summary>
-        Can = 60
+        Can = 60,
+        
+        /// <summary>
+        /// Specifies a Storage event.
+        /// </summary>
+        Storage = 70,
+
+        /// <summary>
+        /// Specifies a Radio event.
+        /// </summary>
+        Radio = 80,
+
     }
 }
