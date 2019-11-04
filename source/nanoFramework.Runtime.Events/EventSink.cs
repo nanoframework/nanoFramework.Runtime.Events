@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2017 The nanoFramework project contributors
 // Portions Copyright (c) Microsoft Corporation.  All rights reserved.
 // See LICENSE file in the project root for full license information.
@@ -16,7 +16,7 @@ namespace nanoFramework.Runtime.Events
     public class EventSink : NativeEventDispatcher
     {
         private static EventSink s_eventSink = null;
-        private static Hashtable s_eventInfoTable = null;
+        private static ArrayList s_eventInfoTable = null;
 
         private class EventInfo
         {
@@ -188,13 +188,15 @@ namespace nanoFramework.Runtime.Events
             // because of lack of constructors in native code we need to check if this field has been initialized
             if (s_eventInfoTable == null)
             {
-                s_eventInfoTable = new Hashtable();
+                s_eventInfoTable = new ArrayList();
             }
 
-            if (s_eventInfoTable.Contains(category))
+            var myEvent = FindEvent(category);
+
+            if (myEvent != null)
             {
                 // event already registered
-                return (EventInfo)s_eventInfoTable[category];
+                return myEvent;
             }
             else
             {
@@ -205,7 +207,7 @@ namespace nanoFramework.Runtime.Events
                 };
 
                 // ... and add it to the events table
-                s_eventInfoTable.Add(category, eventInfo);
+                s_eventInfoTable.Add(eventInfo);
 
                 return eventInfo;
             }
@@ -231,6 +233,19 @@ namespace nanoFramework.Runtime.Events
                 };
                 ev = genericEvent;
             }
+        }
+
+        private static EventInfo FindEvent(EventCategory category)
+        {
+            for(int i = 0; i < s_eventInfoTable.Count; i++)
+            {
+                if(((EventInfo)s_eventInfoTable[i]).Category == category)
+                {
+                    return (EventInfo)s_eventInfoTable[i];
+                }
+            }
+
+            return null;
         }
 
         [MethodImpl(MethodImplOptions.InternalCall)]
