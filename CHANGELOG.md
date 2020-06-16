@@ -1,5 +1,13 @@
 # Changelog
 
+## [v1.5.0](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.5.0) (2020-06-16)
+
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.4.2...v1.5.0)
+
+**Documentation and other chores:**
+
+- Release release-v1.5.0 [\#96](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/96)
+
 ## [v1.4.2](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.4.2) (2020-06-12)
 
 [Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.4.2-preview.11...v1.4.2)
