@@ -25,6 +25,7 @@ jobs:
     vmImage: 'VS2017-Win2016'
 
   variables:
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
     solution: '**/source/*.sln'
     buildPlatform: 'Any CPU'
     buildConfiguration: 'Release'
@@ -48,6 +49,9 @@ jobs:
 
   pool:
     vmImage: 'VS2017-Win2016'
+
+  variables:
+    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
 
   steps:
   # need this here in order to persist GitHub credentials 
