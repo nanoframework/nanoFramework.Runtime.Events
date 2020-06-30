@@ -8,7 +8,7 @@ name: Daily update dependencies
 on:
   schedule:
   # At 00:00 UTC every day.
-  - cron:  '0 07 * * *'
+  - cron:  '00 00 * * *'
   issue_comment:
     types: [created]
 
