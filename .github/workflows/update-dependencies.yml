@@ -8,9 +8,9 @@ name: Daily update dependencies
 on:
   schedule:
   # At 00:00 UTC every day.
-  - cron:  '5/5 * * * *'
-  issue_comment:
-    types: [created]
+  - cron:  '*/5 * * * *'
+  repository_dispatch:
+    types: update-dependencies
 
 defaults:
   run:
@@ -21,7 +21,6 @@ jobs:
     name: Update .NET nanoFramework dependencies
     timeout-minutes: 15
     runs-on: windows-latest
-    if: ${{ github.event_name == '' }} || ( ${{ github.event_name == 'issue_comment' }} && startsWith( ${{ github.event.payload.comment.body }}, '/ud') )
     steps:
       - name: Checkout
         uses: actions/checkout@v2.3.1
@@ -34,6 +33,7 @@ jobs:
           path: tools
       - name: Update dependencies
         run: ./tools/github-actions/update-nf-dependencies.ps1
+        working-directory: main
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v2.8.1
         if: env.CREATE_PR == 'true'
