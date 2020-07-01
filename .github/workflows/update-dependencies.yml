@@ -35,7 +35,7 @@ jobs:
       - name: Update dependencies
         run: ./tools/github-actions/update-nf-dependencies.ps1
       - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v2
+        uses: peter-evans/create-pull-request@v2.8.1
         if: env.CREATE_PR == 'true'
         with:
           title: ${{ env.PR_TITLE }}
