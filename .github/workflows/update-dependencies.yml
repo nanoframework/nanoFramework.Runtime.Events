@@ -32,8 +32,8 @@ jobs:
           repository: nanoframework/nf-tools
           path: tools
       - name: Update dependencies
-        run: ./tools/github-actions/update-nf-dependencies.ps1
-        working-directory: main
+        run: ./github-actions/update-nf-dependencies.ps1
+        working-directory: tools
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v2.8.1
         if: env.CREATE_PR == 'true'
