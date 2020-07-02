@@ -39,7 +39,12 @@ jobs:
         if: env.CREATE_PR == 'true'
         with:
           title: '${{ env.PR_TITLE }}'
-          body: '${{ env.PR_MESSAGE }}'
+          body: |
+            ${{ env.PR_MESSAGE }}
+            
+            [version update]
+            
+            ### :warning: This is an automated update. :warning:
           labels: 'Type: dependencies'
           committer: 'nfbot <nanoframework@outlook.com>'
           branch: ${{ env.BRANCH_NAME }}
