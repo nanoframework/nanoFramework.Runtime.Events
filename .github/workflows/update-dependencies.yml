@@ -8,7 +8,7 @@ name: Daily update dependencies
 on:
   schedule:
   # At 00:00 UTC every day.
-  - cron:  '00 00 * * *'
+  - cron:  '5/5 00 * * *'
   repository_dispatch:
     types: update-dependencies
 
@@ -38,8 +38,8 @@ jobs:
         uses: peter-evans/create-pull-request@v2.8.1
         if: env.CREATE_PR == 'true'
         with:
-          title: ${{ env.PR_TITLE }}
-          body: ${{ env.PR_MESSAGE }}
+          title: '${{ env.PR_TITLE }}'
+          body: '${{ env.PR_MESSAGE }}'
           labels: 'Type: dependencies'
           committer: 'nfbot <nanoframework@outlook.com>'
           branch: ${{ env.BRANCH_NAME }}
