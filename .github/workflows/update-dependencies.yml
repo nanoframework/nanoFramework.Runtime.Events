@@ -8,7 +8,7 @@ name: Daily update dependencies
 on:
   schedule:
   # At 00:00 UTC every day.
-  - cron:  '5/5 * * * *'
+  - cron:  '00 00 * * *'
   repository_dispatch:
     types: update-dependencies
 
@@ -45,7 +45,6 @@ jobs:
             [version update]
             
             ### :warning: This is an automated update. :warning:
-          labels: 'Type: dependencies'
           committer: 'nfbot <nanoframework@outlook.com>'
           branch: ${{ env.BRANCH_NAME }}
           path: main
