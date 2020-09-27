@@ -1,8 +1,8 @@
 # Changelog
 
-## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/HEAD)
+## [v1.8.1-preview.2](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.8.1-preview.2) (2020-09-19)
 
-[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.8.1-preview.22...HEAD)
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.8.1-preview.22...v1.8.1-preview.2)
 
 **Documentation and other chores:**
 
