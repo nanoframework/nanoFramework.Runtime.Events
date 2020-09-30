@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.8.2-preview.1...HEAD)
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.8.2-preview.3...HEAD)
+
+**Documentation and other chores:**
+
+- Bumps nanoFramework.CoreLibrary from 1.8.0-preview.11 to 1.9.0-preview.5 [\#186](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/186)
+
+## [v1.8.2-preview.3](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.8.2-preview.3) (2020-09-30)
+
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.8.2-preview.1...v1.8.2-preview.3)
 
 **Documentation and other chores:**
 
@@ -359,7 +367,6 @@
 **Documentation and other chores:**
 
 - Bumps nanoFramework.CoreLibrary from 1.0.6-preview-021 to 1.1.0 [\#47](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/47)
-- Bumps nanoFramework.CoreLibrary from 1.0.1-preview127 to 1.0.1-preview134 [\#30](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/30)
 
 ## [v1.0.2-preview-023](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.2-preview-023) (2018-12-03)
 
@@ -425,6 +432,7 @@
 **Documentation and other chores:**
 
 - Bumps nanoFramework.CoreLibrary from 1.0.1-preview134 to 1.0.4 [\#32](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/32)
+- Bumps nanoFramework.CoreLibrary from 1.0.1-preview127 to 1.0.1-preview134 [\#30](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/30)
 - Bumps nanoFramework.CoreLibrary from 1.0.1-preview123 to 1.0.1-preview127 [\#29](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/29)
 - Bumps nanoFramework.CoreLibrary from 1.0.1-preview118 to 1.0.1-preview123 [\#27](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/27)
 - 📦 Bumps nanoFramework.CoreLibrary from 1.0.1-preview116 to 1.0.1-preview118 [\#25](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/25)
