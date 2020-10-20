@@ -74,6 +74,7 @@ jobs:
         lib-nanoFramework.System.Net
         lib-nanoFramework.Graphics
         lib-Windows.Devices.Gpio
+        lib-System.Device.Gpio
         lib-Windows.Devices.WiFi
         lib-Windows.Devices.SerialCommunication
         lib-Windows.Storage
