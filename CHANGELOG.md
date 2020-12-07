@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.8.2-preview.10...HEAD)
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.8.2-preview.13...HEAD)
+
+**Documentation and other chores:**
+
+- Remove EventArgs [\#191](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/191)
+
+## [v1.8.2-preview.13](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.8.2-preview.13) (2020-12-07)
+
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.8.2-preview.10...v1.8.2-preview.13)
 
 **Documentation and other chores:**
 
