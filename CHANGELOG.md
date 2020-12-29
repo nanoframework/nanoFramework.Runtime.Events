@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.9.0-preview.2...HEAD)
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.9.0-preview.5...HEAD)
+
+**Documentation and other chores:**
+
+- Bumps nanoFramework.CoreLibrary from 1.10.1-preview.6 to 1.10.1-preview.7 [\#193](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/193)
+
+## [v1.9.0-preview.5](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.9.0-preview.5) (2020-12-28)
+
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.9.0-preview.2...v1.9.0-preview.5)
 
 **Documentation and other chores:**
 
@@ -355,6 +363,10 @@
 
 [Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.5-preview-012...v1.0.5-preview-019)
 
+**Implemented enhancements:**
+
+- Add Storage event [\#52](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/52)
+
 **Documentation and other chores:**
 
 - Bumps nanoFramework.CoreLibrary from 1.2.0 to 1.2.1-preview-001 [\#55](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/55)
@@ -387,10 +399,6 @@
 ## [v1.0.5-preview-003](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.5-preview-003) (2019-03-06)
 
 [Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.4...v1.0.5-preview-003)
-
-**Implemented enhancements:**
-
-- Add Storage event [\#52](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/pull/52)
 
 ## [v1.0.4](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.4) (2019-01-21)
 
