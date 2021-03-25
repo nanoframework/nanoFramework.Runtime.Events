@@ -30,7 +30,7 @@ jobs:
     buildPlatform: 'Any CPU'
     buildConfiguration: 'Release'
     nugetPackageName: 'nanoFramework.Runtime.Events'
-    repoName: 'lib-nanoFramework.Runtime.Events'
+    repoName: 'nanoFramework.Runtime.Events'
 
   steps:
 
@@ -69,15 +69,15 @@ jobs:
     inputs:
       gitHubToken: $(GitHubToken)
       repositoriesToUpdate: |
-        lib-nanoFramework.Devices.Can
-        lib-nanoFramework.Hardware.Esp32
-        lib-nanoFramework.System.Net
-        lib-nanoFramework.Graphics
-        lib-Windows.Devices.Gpio
-        lib-System.Device.Gpio
-        lib-Windows.Devices.WiFi
-        lib-Windows.Devices.SerialCommunication
-        lib-Windows.Storage
+        nanoFramework.Devices.Can
+        nanoFramework.Hardware.Esp32
+        nanoFramework.System.Net
+        nanoFramework.Graphics
+        Windows.Devices.Gpio
+        System.Device.Gpio
+        Windows.Devices.WiFi
+        Windows.Devices.SerialCommunication
+        Windows.Storage
     displayName: Update dependent class libs
 
 ##################################
