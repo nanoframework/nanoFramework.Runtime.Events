@@ -5,15 +5,15 @@
     <version>$version$</version>
     <title>nanoFramework.Runtime.Events</title>
     <authors>nanoFramework project contributors</authors>
-    <owners>nanoFramework project contributors</owners>
+    <owners>nanoFramework project contributors,dotnetfoundation</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="file">LICENSE.md</license>
     <releaseNotes>
     </releaseNotes>
     <developmentDependency>false</developmentDependency>
-    <projectUrl>https://github.com/nanoframework/lib-nanoFramework.Runtime.Events</projectUrl>
-    <icon>nf-logo.png</icon>
-    <repository type="git" url="https://github.com/nanoframework/lib-nanoFramework.Runtime.Events" commit="$commit$" />
+    <projectUrl>https://github.com/nanoframework/nanoFramework.Runtime.Events</projectUrl>
+    <icon>images\nf-logo.png</icon>
+    <repository type="git" url="https://github.com/nanoframework/nanoFramework.Runtime.Events" commit="$commit$" />
     <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
     <description>This package includes the nanoFramework.Runtime.Events assembly for nanoFramework C# projects.
 This package requires a target with nanoFramework.Runtime.Events v$nativeVersion$.</description>
@@ -29,7 +29,7 @@ This package requires a target with nanoFramework.Runtime.Events v$nativeVersion
     <file src="nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.pe" target="lib\nanoFramework.Runtime.Events.pe" />
     <file src="nanoFramework.Runtime.Events\bin\Release\nanoFramework.Runtime.Events.xml" target="lib\nanoFramework.Runtime.Events.xml" />
     <file src="assets\readme.txt" target="" />
-    <file src="assets\nf-logo.png" target="" />
+    <file src="assets\nf-logo.png" target="images" />
     <file src="LICENSE.md" target="" />
   </files>
 </package>

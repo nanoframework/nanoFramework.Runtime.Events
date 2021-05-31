@@ -1,8 +1,8 @@
 trigger:
   branches:
-    include: [main, master, develop, "release-*" ]
+    include: [main, develop, "release-*" ]
   paths:
-    exclude: ["*.md", .gitignore]
+    exclude: [README.md, LICENSE.md, NuGet.Config, .github_changelog_generator, .gitignore]
   tags:
     include: ["v*"]
 
@@ -60,7 +60,7 @@ jobs:
 
   - task: NuGetToolInstaller@0
     inputs:
-      versionSpec: '5.4.0'
+      versionSpec: '5.9.0'
     condition: ne( variables['StartReleaseCandidate'], true )
     displayName: 'Install specific version of NuGet'
 
@@ -71,13 +71,13 @@ jobs:
       repositoriesToUpdate: |
         nanoFramework.Devices.Can
         nanoFramework.Hardware.Esp32
-        nanoFramework.System.Net
         nanoFramework.Graphics
+        Windows.Devices.SerialCommunication
+        Windows.Storage
         Windows.Devices.Gpio
         System.Device.Gpio
         Windows.Devices.WiFi
-        Windows.Devices.SerialCommunication
-        Windows.Storage
+        System.Net
     displayName: Update dependent class libs
 
 ##################################
