@@ -15,8 +15,7 @@
     <icon>images\nf-logo.png</icon>
     <repository type="git" url="https://github.com/nanoframework/nanoFramework.Runtime.Events" commit="$commit$" />
     <copyright>Copyright (c) .NET Foundation and Contributors</copyright>
-    <description>This package includes the nanoFramework.Runtime.Events assembly for nanoFramework C# projects.
-This package requires a target with nanoFramework.Runtime.Events v$nativeVersion$.</description>
+    <description>This package includes the nanoFramework.Runtime.Events assembly for nanoFramework C# projects.&#10;This package requires a target with nanoFramework.Runtime.Events v$nativeVersion$.</description>
     <tags>nanoFramework C# csharp netmf netnf nanoFramework.Runtime.Events</tags>
     <dependencies>
       <dependency id="nanoFramework.CoreLibrary" version="1.10.5-preview.4" />
