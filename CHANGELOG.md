@@ -1,5 +1,17 @@
 # Changelog
 
+## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/HEAD)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.1-preview.1...HEAD)
+
+**Documentation and other chores:**
+
+- Update 1 nuget dependencies [\#208](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/208)
+
+## [v1.9.1-preview.1](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.9.1-preview.1) (2021-06-01)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.0-preview.28...v1.9.1-preview.1)
+
 ## [v1.9.0-preview.28](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.9.0-preview.28) (2021-05-31)
 
 [Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.0-preview.27...v1.9.0-preview.28)
