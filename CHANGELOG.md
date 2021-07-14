@@ -317,8 +317,10 @@
 
 [Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.4.0-preview.5...v1.4.1-preview.1)
 
+## [v1.0.5-preview-003](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.5-preview-003) (2019-03-06)
 ## [v1.4.0-preview.5](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.4.0-preview.5) (2019-11-04)
 
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.4...v1.0.5-preview-003)
 [Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.4.0-preview.4...v1.4.0-preview.5)
 
 **Documentation and other chores:**
@@ -328,6 +330,10 @@
 ## [v1.4.0-preview.4](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.4.0-preview.4) (2019-10-23)
 
 [Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.4.0-preview.3...v1.4.0-preview.4)
+
+## [v1.0.4](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/tree/v1.0.4) (2019-01-21)
+
+[Full Changelog](https://github.com/nanoframework/lib-nanoFramework.Runtime.Events/compare/v1.0.2...v1.0.4)
 
 **Documentation and other chores:**
 
