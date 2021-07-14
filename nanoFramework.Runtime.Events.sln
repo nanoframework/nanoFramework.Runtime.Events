@@ -1,7 +1,7 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27130.2010
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.Runtime.Events", "nanoFramework.Runtime.Events\nanoFramework.Runtime.Events.nfproj", "{0ABBD655-2F68-4F7D-A66F-A552EA812EB1}"
 EndProject

@@ -1,8 +1,8 @@
 trigger:
   branches:
-    include: [master, develop, "release-*" ]
+    include: [main, develop, "release-*" ]
   paths:
-    exclude: ["*.md", .gitignore]
+    exclude: [README.md, LICENSE.md, NuGet.Config, .github_changelog_generator, .gitignore]
   tags:
     include: ["v*"]
 
@@ -22,15 +22,14 @@ jobs:
 - job: Build_Library
   condition: or( eq(variables['UPDATE_DEPENDENTS'], 'false'), eq(variables['StartReleaseCandidate'], 'true') )
   pool:
-    vmImage: 'VS2017-Win2016'
+    vmImage: 'windows-2019'
 
   variables:
-    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
-    solution: '**/source/*.sln'
+    DOTNET_NOLOGO: true
+    solution: '**/*.sln'
     buildPlatform: 'Any CPU'
     buildConfiguration: 'Release'
     nugetPackageName: 'nanoFramework.Runtime.Events'
-    repoName: 'lib-nanoFramework.Runtime.Events'
 
   steps:
 
@@ -48,35 +47,32 @@ jobs:
   - Build_Library
 
   pool:
-    vmImage: 'VS2017-Win2016'
+    vmImage: 'windows-2019'
 
   variables:
-    DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
+    DOTNET_NOLOGO: true
 
   steps:
   # need this here in order to persist GitHub credentials 
   - checkout: self
     fetchDepth: 1
 
-  - task: NuGetToolInstaller@0
-    inputs:
-      versionSpec: '5.4.0'
-    condition: ne( variables['StartReleaseCandidate'], true )
-    displayName: 'Install specific version of NuGet'
+  - template: azure-pipelines-templates/install-nuget.yml@templates  
 
   # update dependencies
   - task: UpdatenFDependencies@1
     inputs:
       gitHubToken: $(GitHubToken)
       repositoriesToUpdate: |
-        lib-nanoFramework.Devices.Can
-        lib-nanoFramework.Hardware.Esp32
-        lib-nanoFramework.System.Net
-        lib-nanoFramework.Graphics
-        lib-Windows.Devices.Gpio
-        lib-Windows.Devices.WiFi
-        lib-Windows.Devices.SerialCommunication
-        lib-Windows.Storage
+        nanoFramework.Devices.Can
+        nanoFramework.Hardware.Esp32
+        nanoFramework.Graphics
+        Windows.Devices.SerialCommunication
+        Windows.Storage
+        Windows.Devices.Gpio
+        System.Device.Gpio
+        Windows.Devices.WiFi
+        System.Net
     displayName: Update dependent class libs
 
 ##################################
@@ -89,7 +85,7 @@ jobs:
   condition: or( failed('Build_Library'), failed('Update_Dependents'))
 
   pool:
-    vmImage: 'VS2017-Win2016'
+    vmImage: 'windows-2019'
 
   steps:
   
