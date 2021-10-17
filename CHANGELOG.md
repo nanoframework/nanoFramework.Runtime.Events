@@ -2,7 +2,19 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.1-preview.7...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.1...HEAD)
+
+**Implemented enhancements:**
+
+- Added EventCategory.HighResolutionTimer [\#214](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/214)
+
+## [v1.9.1](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.9.1) (2021-07-14)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.1-preview.9...v1.9.1)
+
+## [v1.9.1-preview.9](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.9.1-preview.9) (2021-07-14)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.1-preview.7...v1.9.1-preview.9)
 
 **Documentation and other chores:**
 
