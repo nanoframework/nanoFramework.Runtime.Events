@@ -68,6 +68,7 @@ jobs:
         nanoFramework.Hardware.Esp32
         nanoFramework.Graphics
         Windows.Devices.SerialCommunication
+        System.IO.Ports
         Windows.Storage
         Windows.Devices.Gpio
         System.Device.Gpio
