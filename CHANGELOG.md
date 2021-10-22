@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.1...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.2-preview.5...HEAD)
+
+**Implemented enhancements:**
+
+- Add an event for Bluetooth [\#216](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/216)
+
+## [v1.9.2-preview.5](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.9.2-preview.5) (2021-10-17)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.1...v1.9.2-preview.5)
 
 **Implemented enhancements:**
 
