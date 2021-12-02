@@ -1,5 +1,39 @@
 # Changelog
 
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.2-preview.12...HEAD)
+
+**Documentation and other chores:**
+
+- Bumps nanoFramework.CoreLibrary from 1.11.6-preview.2 to 1.11.7 [\#218](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/218)
+
+## [v1.9.2-preview.12](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.9.2-preview.12) (2021-11-30)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.2-preview.8...v1.9.2-preview.12)
+
+**Documentation and other chores:**
+
+- Bumps nanoFramework.CoreLibrary from 1.10.5 to 1.11.6-preview.2 [\#217](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/217)
+
+## [v1.9.2-preview.8](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.9.2-preview.8) (2021-10-22)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.2-preview.5...v1.9.2-preview.8)
+
+**Implemented enhancements:**
+
+- Add an event for Bluetooth [\#216](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/216)
+
+## [v1.9.2-preview.5](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.9.2-preview.5) (2021-10-17)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.1...v1.9.2-preview.5)
+
+**Implemented enhancements:**
+
+- Added EventCategory.HighResolutionTimer [\#214](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/214)
+
+## [v1.9.1](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.9.1) (2021-07-14)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.1-preview.9...v1.9.1)
+
 ## [v1.9.1-preview.9](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.9.1-preview.9) (2021-07-14)
 
 [Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.1-preview.7...v1.9.1-preview.9)

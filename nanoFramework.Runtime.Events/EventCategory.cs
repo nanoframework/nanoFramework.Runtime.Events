@@ -60,5 +60,14 @@ namespace nanoFramework.Runtime.Events
         /// </summary>
         Radio = 80,
 
+        /// <summary>
+        /// Specifies a HighResolutionTimer event.
+        /// </summary>
+        HighResolutionTimer = 90,
+        
+        /// <summary>
+        /// Specifies a Bluetooth event.
+        /// </summary>
+        Bluetooth = 100
     }
 }

@@ -7,6 +7,8 @@ trigger:
     include: ["v*"]
 
 # PR always trigger build
+pr:
+  autoCancel: true
 
 # add nf-tools repo to resources (for Azure Pipelines templates)
 resources:
@@ -26,7 +28,7 @@ jobs:
 
   variables:
     DOTNET_NOLOGO: true
-    solution: '**/*.sln'
+    solution: 'nanoFramework.Runtime.Events.sln'
     buildPlatform: 'Any CPU'
     buildConfiguration: 'Release'
     nugetPackageName: 'nanoFramework.Runtime.Events'
@@ -68,6 +70,7 @@ jobs:
         nanoFramework.Hardware.Esp32
         nanoFramework.Graphics
         Windows.Devices.SerialCommunication
+        System.IO.Ports
         Windows.Storage
         Windows.Devices.Gpio
         System.Device.Gpio
