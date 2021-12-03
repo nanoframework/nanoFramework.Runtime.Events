@@ -69,6 +69,7 @@ jobs:
         nanoFramework.Devices.Can
         nanoFramework.Hardware.Esp32
         nanoFramework.Graphics
+        nanoFramework.Device.Bluetooth
         Windows.Devices.SerialCommunication
         System.IO.Ports
         Windows.Storage
