@@ -68,6 +68,16 @@ namespace nanoFramework.Runtime.Events
         /// <summary>
         /// Specifies a Bluetooth event.
         /// </summary>
-        Bluetooth = 100
+        Bluetooth = 100,
+
+        /// <summary>
+        /// Specifies a Touch event.
+        /// </summary>
+        Touch = 120,
+
+        /// <summary>
+        /// Specifies a Gesture event.
+        /// </summary>
+        Gesture = 130
     }
 }
