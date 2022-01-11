@@ -59,12 +59,9 @@ jobs:
   - checkout: self
     fetchDepth: 1
 
-  - template: azure-pipelines-templates/install-nuget.yml@templates  
-
-  # update dependencies
-  - task: UpdatenFDependencies@1
-    inputs:
-      gitHubToken: $(GitHubToken)
+  # update dependents
+  - template: azure-pipelines-templates/update-dependents.yml@templates  
+    parameters:
       repositoriesToUpdate: |
         nanoFramework.Devices.Can
         nanoFramework.Hardware.Esp32
@@ -77,7 +74,6 @@ jobs:
         System.Device.Gpio
         Windows.Devices.WiFi
         System.Net
-    displayName: Update dependent class libs
 
 ##################################
 # report build failure to Discord
