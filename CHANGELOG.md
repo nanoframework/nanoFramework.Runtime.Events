@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.10.0-preview.1...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.10.0-preview.4...HEAD)
+
+**Documentation and other chores:**
+
+- Update 1 NuGet dependencies [\#222](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/222)
+
+## [v1.10.0-preview.4](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.10.0-preview.4) (2022-01-20)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.10.0-preview.1...v1.10.0-preview.4)
 
 **Documentation and other chores:**
 
