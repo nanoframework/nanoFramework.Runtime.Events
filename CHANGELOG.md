@@ -2,6 +2,66 @@
 
 ## [v1.9.2-preview.14](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.9.2-preview.14) (2021-12-02)
 
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.10.0-preview.13...HEAD)
+
+**Documentation and other chores:**
+
+- Update 1 NuGet dependencies [\#226](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/226)
+
+## [v1.10.0-preview.13](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.10.0-preview.13) (2022-03-17)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.10.0-preview.11...v1.10.0-preview.13)
+
+**Documentation and other chores:**
+
+- Update 1 NuGet dependencies [\#225](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/225)
+
+## [v1.10.0-preview.11](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.10.0-preview.11) (2022-03-14)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.10.0-preview.8...v1.10.0-preview.11)
+
+**Documentation and other chores:**
+
+- Update 1 NuGet dependencies [\#224](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/224)
+
+## [v1.10.0-preview.8](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.10.0-preview.8) (2022-02-17)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.10.0-preview.6...v1.10.0-preview.8)
+
+**Documentation and other chores:**
+
+- Update 1 NuGet dependencies [\#223](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/223)
+
+## [v1.10.0-preview.6](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.10.0-preview.6) (2022-01-28)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.10.0-preview.4...v1.10.0-preview.6)
+
+**Documentation and other chores:**
+
+- Update 1 NuGet dependencies [\#222](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/222)
+
+## [v1.10.0-preview.4](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.10.0-preview.4) (2022-01-20)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.10.0-preview.1...v1.10.0-preview.4)
+
+**Documentation and other chores:**
+
+- Update 1 NuGet dependencies [\#221](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/221)
+
+## [v1.10.0-preview.1](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.10.0-preview.1) (2021-12-28)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.2...v1.10.0-preview.1)
+
+**Implemented enhancements:**
+
+- Add touch and gesture events [\#220](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/220)
+
+## [v1.9.2](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.9.2) (2021-12-02)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.2-preview.14...v1.9.2)
+
+## [v1.9.2-preview.14](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.9.2-preview.14) (2021-12-02)
+
 [Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.9.2-preview.12...v1.9.2-preview.14)
 
 **Documentation and other chores:**
