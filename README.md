@@ -10,8 +10,7 @@
 
 | Component | Build Status | NuGet Package |
 |:-|---|---|
-| nanoFramework.Runtime.Events | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Runtime.Events/_apis/build/status/nanoframework.lib-nanoFramework.Runtime.Events?branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.Runtime.Events/_build/latest?definitionId=22?branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.Runtime.Events.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Runtime.Events/) |
-| nanoFramework.Runtime.Events (preview) | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Runtime.Events/_apis/build/status/nanoframework.lib-nanoFramework.Runtime.Events?branchName=develop)](https://dev.azure.com/nanoframework/nanoFramework.Runtime.Events/_build/latest?definitionId=22?branchName=develop) | [![NuGet](https://img.shields.io/nuget/vpre/nanoFramework.Runtime.Events.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Runtime.Events/) |
+| nanoFramework.Runtime.Events | [![Build Status](https://dev.azure.com/nanoframework/nanoFramework.Runtime.Events/_apis/build/status/nanoFramework.Runtime.Events?repoName=nanoframework%2FnanoFramework.Runtime.Events&branchName=main)](https://dev.azure.com/nanoframework/nanoFramework.Runtime.Events/_build/latest?definitionId=22&repoName=nanoframework%2FnanoFramework.Runtime.Events&branchName=main) | [![NuGet](https://img.shields.io/nuget/v/nanoFramework.Runtime.Events.svg?label=NuGet&style=flat&logo=nuget)](https://www.nuget.org/packages/nanoFramework.Runtime.Events/) |
 
 ## Feedback and documentation
 

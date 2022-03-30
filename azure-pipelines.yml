@@ -103,13 +103,11 @@ jobs:
         nanoFramework.Hardware.Esp32
         nanoFramework.Graphics
         System.Device.Gpio
+        System.Device.WiFi
         System.IO.FileSystem
         System.IO.Ports
         System.Net
-        Windows.Devices.SerialCommunication
         Windows.Storage
-        Windows.Devices.Gpio
-        Windows.Devices.WiFi
 
 ##################################
 # report build failure to Discord
