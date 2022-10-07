@@ -29,27 +29,27 @@ namespace nanoFramework.Runtime.Events
         /// Specifies a GPIO event.
         /// </summary>
         Gpio = 20,
-        
+
         /// <summary>
         /// Specifies a SerialDevice event.
         /// </summary>
         SerialDevice = 30,
-        
+
         /// <summary>
         /// Specifies a Network event.
         /// </summary>
         Network = 40,
-        
+
         /// <summary>
         /// Specifies a WiFi event.
         /// </summary>
         WiFi = 50,
-        
+
         /// <summary>
         /// Specifies a CAN event.
         /// </summary>
         Can = 60,
-        
+
         /// <summary>
         /// Specifies a Storage event.
         /// </summary>
@@ -64,11 +64,16 @@ namespace nanoFramework.Runtime.Events
         /// Specifies a HighResolutionTimer event.
         /// </summary>
         HighResolutionTimer = 90,
-        
+
         /// <summary>
         /// Specifies a Bluetooth event.
         /// </summary>
         Bluetooth = 100,
+
+        /// <summary>
+        /// Specifies a USB event.
+        /// </summary>
+        Usb = 110,
 
         /// <summary>
         /// Specifies a Touch event.
