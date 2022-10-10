@@ -57,6 +57,7 @@
   <ItemGroup>
     <None Include="key.snk" />
     <None Include="packages.config" />
+    <None Include="packages.lock.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib">
