@@ -97,6 +97,7 @@ jobs:
   # update dependents
   - template: azure-pipelines-templates/update-dependents.yml@templates  
     parameters:
+      waitBeforeUpdate: eq(variables['UPDATE_DEPENDENTS'], 'false')
       repositoriesToUpdate: |
         nanoFramework.Device.Bluetooth
         nanoFramework.Devices.Can
@@ -116,7 +117,11 @@ jobs:
   dependsOn:
   - Build_Library
   - Update_Dependents
-  condition: or( failed('Build_Library'), failed('Update_Dependents'))
+  condition: >-
+    or(
+      failed('Build_Library'),
+      failed('Update_Dependents')
+    )
 
   pool:
     vmImage: 'windows-latest'
