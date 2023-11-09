@@ -19,7 +19,7 @@
 This package requires a target with nanoFramework.Runtime.Events v$nativeVersion$ (checksum $checksum$).</description>
     <tags>nanoFramework C# csharp netmf netnf</tags>
     <dependencies>
-      <dependency id="nanoFramework.CoreLibrary" version="1.14.2" />
+      <dependency id="nanoFramework.CoreLibrary" version="1.15.5" />
     </dependencies>
   </metadata>
   <files>
