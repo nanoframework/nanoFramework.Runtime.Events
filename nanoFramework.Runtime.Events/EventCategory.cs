@@ -83,6 +83,11 @@ namespace nanoFramework.Runtime.Events
         /// <summary>
         /// Specifies a Gesture event.
         /// </summary>
-        Gesture = 130
+        Gesture = 130,
+
+        /// <summary>
+        /// Specifies an OpenThread event.
+        /// </summary>
+        OpenThread = 140
     }
 }
