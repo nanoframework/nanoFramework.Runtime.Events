@@ -2,7 +2,15 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.11.6...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.11.15...HEAD)
+
+**Implemented enhancements:**
+
+- Add specific event for OpenThread [\#239](https://github.com/nanoframework/nanoFramework.Runtime.Events/pull/239)
+
+## [v1.11.15](https://github.com/nanoframework/nanoFramework.Runtime.Events/tree/v1.11.15) (2023-11-09)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.Runtime.Events/compare/v1.11.6...v1.11.15)
 
 **Documentation and other chores:**
 
