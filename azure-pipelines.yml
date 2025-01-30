@@ -17,6 +17,10 @@ trigger:
       - assets/*
       - .github/*
 
+  tags:
+    include:
+      - v*
+
 # PR always trigger build
 pr:
   autoCancel: true
@@ -34,9 +38,12 @@ jobs:
 ##############################
 - job: Build_Library
   condition: >-
-    or(
-      eq(variables['UPDATE_DEPENDENTS'], 'false'),
-      eq(variables['StartReleaseCandidate'], 'true')
+    and(
+      not(startsWith(variables['Build.SourceBranch'], 'refs/tags/v')),
+      or(
+        eq(variables['UPDATE_DEPENDENTS'], 'false'),
+        eq(variables['StartReleaseCandidate'], 'true')
+      )
     )
   pool:
     vmImage: 'windows-latest'
@@ -67,20 +74,15 @@ jobs:
   condition: >-
     or(
       and(
-        succeeded(),
         startsWith(variables['Build.SourceBranch'], 'refs/tags/v'),
         eq(variables['StartReleaseCandidate'], 'false')
       ),
       and(
-        succeeded(),
         contains(variables['getCommitMessage.COMMIT_MESSAGE'], '***UPDATE_DEPENDENTS***'),
         eq(variables['StartReleaseCandidate'], 'false')
       ),
       eq(variables['UPDATE_DEPENDENTS'], 'true')
     )
-
-  dependsOn:
-  - Build_Library
 
   pool:
     vmImage: 'windows-latest'
@@ -96,13 +98,10 @@ jobs:
   # update dependents
   - template: azure-pipelines-templates/update-dependents.yml@templates  
     parameters:
-      ${{ if eq(variables['UPDATE_DEPENDENTS'], 'true') }}:
-        waitBeforeUpdate: false
-      ${{ else }}:
-        waitBeforeUpdate: true
+      waitBeforeUpdate: false
       repositoriesToUpdate: |
         nanoFramework.Device.Bluetooth
-        nanoFramework.Devices.Can
+        nanoFramework.Device.Can
         nanoFramework.Hardware.Esp32
         nanoFramework.Graphics
         System.Device.Gpio
@@ -110,7 +109,6 @@ jobs:
         System.IO.FileSystem
         System.IO.Ports
         System.Net
-        Windows.Storage
 
 ##################################
 # report build failure to Discord
