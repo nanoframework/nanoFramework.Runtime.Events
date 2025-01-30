@@ -1,1 +1,0 @@
-**/nanoFramework.Runtime.Events.*
