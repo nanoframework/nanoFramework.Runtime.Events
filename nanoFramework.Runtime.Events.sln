@@ -6,7 +6,6 @@ Project("{11A8DD76-328B-46DF-9F39-F559912D0360}") = "nanoFramework.Runtime.Event
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{233699F5-367D-4860-B8CD-FABCB0628FA0}"
 	ProjectSection(SolutionItems) = preProject
-		nanoFramework.Runtime.Events.DELIVERABLES.nuspec = nanoFramework.Runtime.Events.DELIVERABLES.nuspec
 		nanoFramework.Runtime.Events.nuspec = nanoFramework.Runtime.Events.nuspec
 		NuGet.Config = NuGet.Config
 		version.json = version.json
