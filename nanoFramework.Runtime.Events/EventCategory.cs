@@ -88,6 +88,11 @@ namespace nanoFramework.Runtime.Events
         /// <summary>
         /// Specifies an OpenThread event.
         /// </summary>
-        OpenThread = 140
+        OpenThread = 140,
+
+        /// <summary>
+        /// Specifies an EspNow event.
+        /// </summary>
+        EspNow = 150
     }
 }
