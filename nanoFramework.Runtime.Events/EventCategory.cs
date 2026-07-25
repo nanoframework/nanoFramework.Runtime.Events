@@ -98,6 +98,6 @@ namespace nanoFramework.Runtime.Events
         /// <summary>
         /// Specifies a PIO event.
         /// </summary>
-        Pio = 160
+        PicoPio = 160
     }
 }
