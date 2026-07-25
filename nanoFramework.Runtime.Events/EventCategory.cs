@@ -93,6 +93,11 @@ namespace nanoFramework.Runtime.Events
         /// <summary>
         /// Specifies an EspNow event.
         /// </summary>
-        EspNow = 150
+        EspNow = 150,
+
+        /// <summary>
+        /// Specifies a PIO event.
+        /// </summary>
+        Pio = 160
     }
 }
